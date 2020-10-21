@@ -38,5 +38,5 @@
             <p class="alert alert-warning">No permission created yet.</p>
         @endif
     </section>
-    <!-- /.content -->
+    <!-- /.content *ù!:ml;,kjnbhgvcfdxwsq -->
 @endsection
