@@ -8,6 +8,27 @@
      * [b. Software](#software)
  5) [Web Apps developped](#web-apps-developped)
  6) [Deployment](#deployment)
+ 7) [Screenshots](#screenshots)
+     * [Accounts](#accounts)
+        - a) [Merchant](#accounts-merchant)
+        - b) [Customer](#accounts-customer)
+     * [Step 01: Make online shopping by cardholder](#step01)
+        - a) [Hanouti web app home page](#hanouti-home-page)
+        - b) [Hanouti login page](#hanouti-login-page)
+        - c) [Hanouti add products to cart page](#hanouti-add-products-to-cart-page)
+        - d) [Hanouti checkout page](#hanouti-checkout-page)
+        - e) [Hanouti choose the payment method page](#hanouti-choose-payment-method-page)
+     * [Step 02: Submit card information to Payment Gateway](#step02)
+     * [Step 03: Sending/Requesting the code (OTP) ](#step03)
+     * [Step 04: verification email](#step04)
+     * [Step 05: type code](#step05)
+     * [Step 06: Make transaction](#step06)
+        - a) [Merchant](#step06-merchant)
+        - b) [Customer](#step06-customer)
+     * [Step 07: Showing payment receipt](#step07)
+     * [Step 08: Send payment receipt via email](#step08)
+
+==================================================================================================================
 <a name="motivation"></a>
 ## 1) Motivation:
 This is our master thesis project in [University of Ibn Khaldoun TIARET](http://www.univ-tiaret.dz/an/). The present projects and documents (please take a look to this document: [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf)) aims to describe how to implement the 3D secure protocol according to the EMV standard and adapt it for the ecommerce market in Algeria, and also how to make the double authentication using SMS and email via one-time password (OTP), or other mechanisms.
@@ -59,16 +80,16 @@ following much expressive, elegant syntax and architectural pattern.
 We have also used: PHP as a server scripting language, and Linux Ubuntu as OS, and other tools like: phpMyAdmin, MySQL,Bootstrap, WampServer, Composer, Apache, Visual Studio Code (vsc), VirtualBox, Draw.io, HTML, CSS, JQuery, XML, SSL, RestAPI, JSON.
 <a name="web-apps-developped"></a>
 ## 5) Web Apps developped
-### 1. Hanouti ecommerce.
+1. **Hanouti ecommerce**
 To verify our implementation of 3D Secure protocol, we have developed this ecommerce website to make online shopping and it allows to their consumers to buy goods or services from a seller (Merchant) over the Internet using a web browser. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/hanouti).
-### 2. Payment gateway.
+2. **Payment gateway**
 To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/interoperability_domain).
-### 3. Interoperability domain.
+3. **Interoperability domain**
 To simulate an interoperability domain, we have developed this web app to forward messages between issuer and acquirer domains. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/interoperability_domain).
-### 4. Issuer domain(bank).
+4. **Issuer domain(bank)**
 To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
 To get the source code, contact me!.
-### 5. Acquirer domain(bank)
+5. **Acquirer domain(bank)**
 To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
 To get the source code, contact me!.
 
@@ -134,51 +155,68 @@ I hope you have an enjoyable time in our beautiful web apps!!
 ```
 php artisan serve
 ```
-
 <a name="screenshots"></a>
 ## 6) Screenshots
+<a name="accounts"></a>
 ### Accounts
+<a name="accounts-merchant"></a>
 #### a) Merchant
 ![laptops](screenshots/Accounts%20of%20acquirer%20bank.png?raw=true "Accounts of acquirer bank")
+<a name="accounts-customer"></a>
 #### b) Customer
 ![laptops](screenshots/Accounts%20of%20issuer%20bank.png?raw=true "Accounts of issuer bank")
+<a name="step01"></a>
 ### Step 01: Make online shopping by cardholder
+<a name="hanouti-home-page"></a>
 #### Hanouti web app home page
 ![laptops](screenshots/Hanouti%20ecommerce%20webapp%20home%20page.png?raw=true "Hanouti ecommerce webapp home page")
+<a name="hanouti-login-page"></a>
 #### Hanouti login page
 ![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Login%20page.png?raw=true "Hanouti ecommerce webapp Login page")
+<a name="hanouti-add-products-to-cart-page"></a>
 #### Hanouti add products to cart page
 ![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Add%20product%20to%20cart%20page.png?raw=true "Hanouti ecommerce webapp Add product to cart page")
+<a name="hanouti-checkout-page"></a>
 #### Hanouti checkout page
 ![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Checkout%20page.png?raw=true "Hanouti ecommerce webapp Checkout page")
+<a name="hanouti-choose-payment-method-page"></a>
 #### Hanouti choose the payment method page
 ![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Choose%20payment%20method%20page.png?raw=true "Hanouti ecommerce webapp Choose payment method paged")
+<a name="step02"></a>
 ### Step 02: Submit card information to Payment Gateway
 #### PGW-PFE3DS, information card page
 ![laptops](screenshots/Payment%20gateway%20card%20information.png?raw=true "Payment gateway card information")
+<a name="step03"></a>
 ### Step 03: Sending/Requesting the code (OTP) 
 #### PGW-PFE3DS, send verification code
 ![laptops](screenshots/Payment%20gateway%20requesting%20or%20sending%20OTP%20code.png?raw=true "Payment gateway requesting or sending OTP code")
+<a name="step04"></a>
 ### Step 04: verification email 
 #### Issuer bank send verification email message
 ![laptops](screenshots/Code%20verification%20email%20from%20issuer%20bank.png?raw=true "Code verification email from issuer bank")
+<a name="step05"></a>
 ### Step 05: type code
 #### PGW-PFE3DS, Enter the code
 ![laptops](screenshots/Payment%20gateway%20validating%20OTP%20code.png?raw=true "Payment gateway validating OTP code")
+<a name="step06"></a>
 ### Step 06: Make transaction
+<a name="step06-merchant"></a>
 #### Merchant
 * Acquirer Account
 ![laptops](screenshots/Accounts%20of%20acquirer%20bank%20after%20money%20transfert.png?raw=true "Accounts of acquirer bank after money transfert")
 * Acquirer Transaction
 ![laptops](screenshots/Transactions%20of%20acquirer%20bank.png?raw=true "Transactions of acquirer bank")
+<a name="step06-customer"></a>
 #### Customer
 * Issuer Account
 ![laptops](screenshots/Accounts%20of%20issuer%20bank%20after%20money%20transfert.png?raw=true "Accounts of issuer bank after money transfert")
 * Issuer Transaction
 ![laptops](screenshots/Transactions%20of%20issuer%20bank.png?raw=true "Transactions of issuer bank")
+<a name="step07"></a>
 ### Step 07: Showing payment receipt
 #### Hanouti payment receipt
 ![laptops](screenshots/Payment%20receipt%20of%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt of ecommerce webapp hanouti")
+<a name="step08"></a>
 ### Step 08: Send payment receipt via email
 ####  Hanouti send payment receipt via email
 ![laptops](screenshots/Payment%20receipt%20email%20from%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt email from ecommerce webapp hanouti")
