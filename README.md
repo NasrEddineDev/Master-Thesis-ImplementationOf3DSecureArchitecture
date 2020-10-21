@@ -28,7 +28,7 @@
      * [Step 07: Showing payment receipt](#step07)
      * [Step 08: Send payment receipt via email](#step08)
 
-==================================================================================================================
+---------------------
 <a name="motivation"></a>
 ## 1) Motivation:
 This is our master thesis project in [University of Ibn Khaldoun TIARET](http://www.univ-tiaret.dz/an/). The present projects and documents (please take a look to this document: [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf)) aims to describe how to implement the 3D secure protocol according to the EMV standard and adapt it for the ecommerce market in Algeria, and also how to make the double authentication using SMS and email via one-time password (OTP), or other mechanisms.
