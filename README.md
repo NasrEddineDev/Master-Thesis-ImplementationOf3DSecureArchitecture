@@ -81,17 +81,17 @@ We have also used: PHP as a server scripting language, and Linux Ubuntu as OS, a
 <a name="web-apps-developped"></a>
 ## 5) Web Apps developped
 1. **Hanouti ecommerce**
-To verify our implementation of 3D Secure protocol, we have developed this ecommerce website to make online shopping and it allows to their consumers to buy goods or services from a seller (Merchant) over the Internet using a web browser. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/hanouti).
+To verify our implementation of 3D Secure protocol, we have developed this ecommerce website to make online shopping and it allows to their consumers to buy goods or services from a seller (Merchant) over the Internet using a web browser. The source code is in [source codes of web apps/hanouti folder](source%20codes%20of%20web%20apps/hanouti).
 2. **Payment gateway**
-To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/interoperability_domain).
+To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [source codes of web apps/](source%20codes%20of%20web%20apps/interoperability_domain).
 3. **Interoperability domain**
-To simulate an interoperability domain, we have developed this web app to forward messages between issuer and acquirer domains. The source code is in [Master thesis repport](source%20codes%20of%20web%20apps/interoperability_domain).
+To simulate an interoperability domain, we have developed this web app to forward messages between issuer and acquirer domains. The source code is in [source codes of web apps/interoperability_domain folder](source%20codes%20of%20web%20apps/interoperability_domain).
 4. **Issuer domain(bank)**
 To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
-To get the source code, contact me!.
+To get the full source code, contact me!.
 5. **Acquirer domain(bank)**
 To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
-To get the source code, contact me!.
+To get the full source code, contact me!.
 
 <a name="deployment"></a>
 ## 6) Deployment
