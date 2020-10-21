@@ -1,49 +1,222 @@
-# Implementation Of 3D Secure Architecture
+# Implementation Of 3D Secure E-Commerce Architecture
 ## Contents:
+ 1) [Motivation](#motivation)
+ 2) [Folders description](#folders-description)
+ 3) [About this project](#about-this-project)
+ 4) [My dev environment](#my-dev-environment)
+     * [a. Hardware](#hardware)
+     * [b. Software](#software)
+ 5) [Web Apps developped](#web-apps-developped)
+ 6) [Deployment](#deployment)
+ 7) [Screenshots](#screenshots)
+     * [Accounts](#accounts)
+        - a) [Merchant](#accounts-merchant)
+        - b) [Customer](#accounts-customer)
+     * [Step 01: Make online shopping by cardholder](#step01)
+        - a) [Hanouti web app home page](#hanouti-home-page)
+        - b) [Hanouti login page](#hanouti-login-page)
+        - c) [Hanouti add products to cart page](#hanouti-add-products-to-cart-page)
+        - d) [Hanouti checkout page](#hanouti-checkout-page)
+        - e) [Hanouti choose the payment method page](#hanouti-choose-payment-method-page)
+     * [Step 02: Submit card information to Payment Gateway](#step02)
+     * [Step 03: Sending/Requesting the code (OTP) ](#step03)
+     * [Step 04: verification email](#step04)
+     * [Step 05: type code](#step05)
+     * [Step 06: Make transaction](#step06)
+        - a) [Merchant](#step06-merchant)
+        - b) [Customer](#step06-customer)
+     * [Step 07: Showing payment receipt](#step07)
+     * [Step 08: Send payment receipt via email](#step08)
 
+---------------------
+<a name="motivation"></a>
 ## 1) Motivation:
 This is our master thesis project in [University of Ibn Khaldoun TIARET](http://www.univ-tiaret.dz/an/). The present projects and documents (please take a look to this document: [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf)) aims to describe how to implement the 3D secure protocol according to the EMV standard and adapt it for the ecommerce market in Algeria, and also how to make the double authentication using SMS and email via one-time password (OTP), or other mechanisms.
 To implement 3D Secure protcol, we have developed 5 web applications witch are: Hanouti ecommerce, payment gateway, interoperability domain, Issuer domain(bank), acquirer domain(bank). We have used Laravel and JQuery framework and many others open source tools to develop these web apps and to implement this architecture.
+<a name="folders-description"></a>
 ## 2) Folders description:
-master thesis docs: this folder contains report and slidshow of this thesis
-figures: contains figures used in this thsis
-source codes of web apps: contains source codes of the fifth web apps
-books: contains few usefull books
-images: contains logo, ...
-screenshots: according to the given name, this folder contains screeshots of differents web applications
-## 2) Introduction: (from our thesis)
+* **master thesis docs:** this folder contains report and slidshow of this thesis
+* **figures:** contains figures used in this thsis
+* **source codes of web apps:** contains source codes of the fifth web apps
+* **books:** contains few usefull books
+* **images:** contains logo, ...
+* **screenshots:** according to the given name, this folder contains screeshots of differents web applications
+<a name="about-this-project"></a>
+## 3) About this project: (introduction from our thesis)
 Until these days, for many hundreds of years or since the existence of the human being, people were shopping and sometimes traveled to do this to improve their lifestyles. Nowadays, fewer and fewer consumers want to travel to shop, through the Internet these consumers can do all their shopping without leaving their homes. This type of shopping is called e-commerce.
 E-Commerce is becoming a useful service for consumers, but it is also an important component in the daily activities of merchants. It allows them to contact their customers and suppliers, advertise and even organize efficiently the invoicing and the distribution of their products and services. In addition, it reduces the operating and support costs of the business. However, the lack of security in web-based transactions and the ease with which the privacy of online communications can be violated are the main stumbling blocks of e-commerce.
+
 Merchant online shop websites provide an easy target for attackers because they typically have limited funds and do not have dedicated personnel to monitor, update and defend their systems.  The attacks on businesses continue to rise each year. The challenge is to successfully integrate effective security measures and mechanisms to protect the business from being compromised by attackers. Effective security is important for the continuity of business, trust of clients, and compliance with industry-specific laws and regulations. One breach in security can cost a business a lot of money, even shut it down.
 There are a lot of E-commerce security strategies and mechanisms, one of them is 3D Secure protocol. Which is a messaging protocol developed by EMVCo to enable consumers to authenticate themselves with their card issuer when making card-not-present (CNP) e-commerce purchases. The additional security layer helps prevent unauthorized CNP transactions and protects the merchant from CNP exposure to fraud. The three domains consist of the merchant/acquirer domain, customer/issuer domain, and the interoperability domain.
+
 The documents of this project aims to describe how to implement the 3D secure protocol according to the EMV standard and adapt it for the ecommerce market in Algeria, and also how to make the double authentication using SMS and email via one-time password (OTP), or other mechanisms.
+
 This document is divided into three main sections. The first section gives an overview of ecommerce and E-payment security (the state of the art), this section is organized as follows: the first chapter begins by a history of Ecommerce, following this by its types, its characteristics, and finally its pros and cons. In the second chapter we will show the security services or requirements, the different security models for E-payment using cards, the most famous protocols used in online shopping, and a detailed study of 3D Secure System and a summary of two alternatives that implement 3D Secure scheme.
 The second section examines 3D Secure protocol components and messages, a general activity diagram of the protocol is outlined in this section, a detailed and explained steps of this protocol, and finally we will show the 3D Secure pseudocode.
 In the last section, we have described our environment including hardware and software tools used, and we have analyzed and presented the different diagrams used to develop the three web applications for banks1, payment gateway, and merchant online shop. After that, we will present source code developed to implement our protocol, and by making a real demonstration, we have obtained comprehensive results proving our implementation.
-## ) My dev environment:
+<a name="my-dev-environment"></a>
+## 4) My dev environment:
+These are my laptops used to develop this project:
+![laptops](images/my%20environment/IMG_20201021_035216.jpg?raw=true "Title")
+<a name="hardware"></a>
 ### a. Hardware
 
-### b. Software
+Table 01 Characteristics of physical and virtual machines.
 
-
-## ) Apps developped
-
+![Table 01 Characteristics of physical and virtual machines](figures/Table%20of%20Characteristics%20of%20physical%20and%20virtual%20machines.png?raw=true "Title")
 
 Architecture of 3D Secure implementation
-![alt text](https://raw.githubusercontent.com/NasrEddineDev/Master-Thesis-ImplementationOf3DSecureArchitecture/figures/hardware%20architecture.png)
+![Architecture of 3D Secure implementation](figures/3D%20Secure%20Components.png?raw=true "Title")
+<a name="software"></a>
+### b. Software
+We will present here the different tools that we have working with. All our services are most often created using free tools and open source technologies.
+* **Laravel**
+Is an open-source web application development framework written in PHP. It is created by
+Taylor Otwell and released under MIT License. And it offers you rapid application
+development following the model-view-controller (MVC) architectural pattern. Laravel is a
+framework which makes it easier for you to build professional yet powerful web applications
+following much expressive, elegant syntax and architectural pattern.
+* **Other tools**
+We have also used: PHP as a server scripting language, and Linux Ubuntu as OS, and other tools like: phpMyAdmin, MySQL,Bootstrap, WampServer, Composer, Apache, Visual Studio Code (vsc), VirtualBox, Draw.io, HTML, CSS, JQuery, XML, SSL, RestAPI, JSON.
+<a name="web-apps-developped"></a>
+## 5) Web Apps developped
+1. **Hanouti ecommerce**
+To verify our implementation of 3D Secure protocol, we have developed this ecommerce website to make online shopping and it allows to their consumers to buy goods or services from a seller (Merchant) over the Internet using a web browser. The source code is in [source codes of web apps/hanouti folder](source%20codes%20of%20web%20apps/hanouti).
+2. **Payment gateway**
+To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [source codes of web apps/pgw_pfe3ds folder](source%20codes%20of%20web%20apps/interoperability_domain).
+3. **Interoperability domain**
+To simulate an interoperability domain, we have developed this web app to forward messages between issuer and acquirer domains. The source code is in [source codes of web apps/interoperability_domain folder](source%20codes%20of%20web%20apps/interoperability_domain).
+4. **Issuer domain(bank)**
+To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
+To get the full source code, contact me!.
+5. **Acquirer domain(bank)**
+To simulate an issuer bank, we have developed this web app to create customers, accounts, cards, transactions, account types, users….etc., please take a look to [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf) whre we have explained it in brief by showing use cases, sequence diagram, class diagram, functionalities list.
+To get the full source code, contact me!.
 
-## ) Islamic banks!:
-
-  We would like to note that all current banking systems in Algeria are illegal in islamic ruls (sharia or Fiqh), because they contain Riba (interest or usury), Gharar (uncertainty) and may be Maysir (gambling), and others in its transactions. These three elements are prohibited by :
-1. The Holy Quran, please take a look to : 
-   - Riba: Al-Rum, 30:39; Al-Nisa, 4:161; Ali-Imran, 3:130 and Al-Bakarah, 2:275-281.
-   - El gharar: Al-Bakarah, 2:188; Al- Nisa, 4:29.
-   - Gambling: Al- Bakarah, 2:219 and Al-Maidah, 5:93.
-2. The sunnah or Elhadith of Prophet Muhammad (PBUH): 
-   * Riba: 'Abdullah (b. Mas'ud) (Allah be pleased with him) said that Allah's Messenger (ﷺ) cursed the one who accepted interest and the one who paid it I asked about the one who recorded it, and two witnesses to it. He (the narrator) said: We narrate what we have heard [Sahih Muslim 1513].
-   * El gharar: Abu Huraira (Allah be pleased with him) reported that Allah's Messenger (ﷺ) forbade a transaction determined by throwing stones, and the type which involves some uncertainty [Sahih Muslim 1513].
-   * Gambling: Abu Huraira reported Allah's Messenger (ﷺ) as saying: He who takes an oath in the course of which he says: By Lat (and al-'Uzza), he should say: There is no god but Allah; and that if anyone says to his friend:" Come and I will gamble with you," he should pay sadaqa [Sahih Muslim 1647].
-   
-  We would like also to note that the Prohibition of Riba (interest or usury), Gharar (uncertainty) and Maysir (gambling) are the important principles -especially the Riba- of Islamic banking and they allow to differentiate it from conventional banking systems. 'Presence of these elements in financial transactions lead to many problems, among them: excessive debt, negative growth, speculation, and create large difference between the wealthy and needy. This is against the principles of Islam; hence, there is a strict prohibition to protect the society from the impact of instability, unemployment, inflation, and it promotes economic efficiency and social justice. The economic rationale behind eliminating Riba (interest or usury) is to establish a banking system based on the value of justice, social responsibility, equality, stability and growth.' The Islamic banking system encourages risk and return sharing amongst the investor and entrepreneur to share equitable returns based on capital proportion and the services offered. It promotes the theme ‘Banking for everyone’, whereby there is no discrimination in offering banking services to people of different social standings. The objective is to minimize the gap between rich and poor and to establish socio-economic justice and to achieve other ethical and religious goals.
-   
-  For more information about Islamic banks and Riba, please take a deep look to these books and reports: “Ettamhid”which is an explanation of mowata Imam Malek, “Prohibition of Riba and Gharar in Islamic Banking”, and Principles of Islamic Finance: Prohibition of Riba, Gharar and Maysir.
+<a name="deployment"></a>
+## 6) Deployment
+To install the fifth Web apps, follow these steps for each web app:
+1. Install the dependencies with Composer
+```
+# cd in your project directory
+composer install
+composer dumpautoload -o
+```
+2. Database configuration
+* config/app.php
+```
+# cd in your config/app.php file
+'env' => env('APP_ENV', 'production'),
+# Debug mode
+'debug' => env('APP_DEBUG', false),
+# URL
+'url' => env('APP_URL', 'http://localhost'),
+....
+```
+* environment file
+```
+# cd in your .env file
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laracom
+DB_USERNAME=nasreddine
+DB_PASSWORD=*********
+```
+3. Email configuration
+```
+# cd in your .env file
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=hanouti*******@gmail.com
+MAIL_PASSWORD=*********
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=hanouti*******@gmail.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
+4. migrate and seed your database
+```
+# cd in your project directory
+php artisan migrate --seed
+```
+5. Generate the key for your environment file
+```
+# cd in your project directory
+php artisan key:generate
+```
+6. Finish by clearing the config and generate the cache
+```
+php artisan config:clear
+php artisan config:cache
+```
+7. Start the ecommerce web site, and if you wish! you can start the other web apps. 
+I hope you have an enjoyable time in our beautiful web apps!!
+```
+php artisan serve
+```
+<a name="screenshots"></a>
+## 6) Screenshots
+<a name="accounts"></a>
+### Accounts
+<a name="accounts-merchant"></a>
+#### a) Merchant
+![laptops](screenshots/Accounts%20of%20acquirer%20bank.png?raw=true "Accounts of acquirer bank")
+<a name="accounts-customer"></a>
+#### b) Customer
+![laptops](screenshots/Accounts%20of%20issuer%20bank.png?raw=true "Accounts of issuer bank")
+<a name="step01"></a>
+### Step 01: Make online shopping by cardholder
+<a name="hanouti-home-page"></a>
+#### Hanouti web app home page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20home%20page.png?raw=true "Hanouti ecommerce webapp home page")
+<a name="hanouti-login-page"></a>
+#### Hanouti login page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Login%20page.png?raw=true "Hanouti ecommerce webapp Login page")
+<a name="hanouti-add-products-to-cart-page"></a>
+#### Hanouti add products to cart page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Add%20product%20to%20cart%20page.png?raw=true "Hanouti ecommerce webapp Add product to cart page")
+<a name="hanouti-checkout-page"></a>
+#### Hanouti checkout page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Checkout%20page.png?raw=true "Hanouti ecommerce webapp Checkout page")
+<a name="hanouti-choose-payment-method-page"></a>
+#### Hanouti choose the payment method page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Choose%20payment%20method%20page.png?raw=true "Hanouti ecommerce webapp Choose payment method paged")
+<a name="step02"></a>
+### Step 02: Submit card information to Payment Gateway
+#### PGW-PFE3DS, information card page
+![laptops](screenshots/Payment%20gateway%20card%20information.png?raw=true "Payment gateway card information")
+<a name="step03"></a>
+### Step 03: Sending/Requesting the code (OTP) 
+#### PGW-PFE3DS, send verification code
+![laptops](screenshots/Payment%20gateway%20requesting%20or%20sending%20OTP%20code.png?raw=true "Payment gateway requesting or sending OTP code")
+<a name="step04"></a>
+### Step 04: verification email 
+#### Issuer bank send verification email message
+![laptops](screenshots/Code%20verification%20email%20from%20issuer%20bank.png?raw=true "Code verification email from issuer bank")
+<a name="step05"></a>
+### Step 05: type code
+#### PGW-PFE3DS, Enter the code
+![laptops](screenshots/Payment%20gateway%20validating%20OTP%20code.png?raw=true "Payment gateway validating OTP code")
+<a name="step06"></a>
+### Step 06: Make transaction
+<a name="step06-merchant"></a>
+#### Merchant
+* Acquirer Account
+![laptops](screenshots/Accounts%20of%20acquirer%20bank%20after%20money%20transfert.png?raw=true "Accounts of acquirer bank after money transfert")
+* Acquirer Transaction
+![laptops](screenshots/Transactions%20of%20acquirer%20bank.png?raw=true "Transactions of acquirer bank")
+<a name="step06-customer"></a>
+#### Customer
+* Issuer Account
+![laptops](screenshots/Accounts%20of%20issuer%20bank%20after%20money%20transfert.png?raw=true "Accounts of issuer bank after money transfert")
+* Issuer Transaction
+![laptops](screenshots/Transactions%20of%20issuer%20bank.png?raw=true "Transactions of issuer bank")
+<a name="step07"></a>
+### Step 07: Showing payment receipt
+#### Hanouti payment receipt
+![laptops](screenshots/Payment%20receipt%20of%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt of ecommerce webapp hanouti")
+<a name="step08"></a>
+### Step 08: Send payment receipt via email
+####  Hanouti send payment receipt via email
+![laptops](screenshots/Payment%20receipt%20email%20from%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt email from ecommerce webapp hanouti")
