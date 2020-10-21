@@ -36,7 +36,7 @@ In the last section, we have described our environment including hardware and so
 <a name="my-dev-environment"></a>
 ## 4) My dev environment:
 These are my laptops used to develop this project:
-![Architecture of 3D Secure implementation](images/my%20environment/IMG_20201021_035216.jpg?raw=true "Title")
+![laptops](images/my%20environment/IMG_20201021_035216.jpg?raw=true "Title")
 <a name="hardware"></a>
 ### a. Hardware
 
@@ -119,7 +119,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 # cd in your project directory
 php artisan migrate --seed
 ```
-4. Generate the key for your environment file
+5. Generate the key for your environment file
 ```
 # cd in your project directory
 php artisan key:generate
@@ -135,3 +135,50 @@ I hope you have an enjoyable time in our beautiful web apps!!
 php artisan serve
 ```
 
+<a name="screenshots"></a>
+## 6) Screenshots
+### Accounts
+#### a) Merchant
+![laptops](screenshots/Accounts%20of%20acquirer%20bank.png?raw=true "Accounts of acquirer bank")
+#### b) Customer
+![laptops](screenshots/Accounts%20of%20issuer%20bank.png?raw=true "Accounts of issuer bank")
+### Step 01: Make online shopping by cardholder
+#### Hanouti web app home page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20home%20page.png?raw=true "Hanouti ecommerce webapp home page")
+#### Hanouti login page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Login%20page.png?raw=true "Hanouti ecommerce webapp Login page")
+#### Hanouti add products to cart page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Add%20product%20to%20cart%20page.png?raw=true "Hanouti ecommerce webapp Add product to cart page")
+#### Hanouti checkout page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Checkout%20page.png?raw=true "Hanouti ecommerce webapp Checkout page")
+#### Hanouti choose the payment method page
+![laptops](screenshots/Hanouti%20ecommerce%20webapp%20Choose%20payment%20method%20page.png?raw=true "Hanouti ecommerce webapp Choose payment method paged")
+### Step 02: Submit card information to Payment Gateway
+#### PGW-PFE3DS, information card page
+![laptops](screenshots/Payment%20gateway%20card%20information.png?raw=true "Payment gateway card information")
+### Step 03: Sending/Requesting the code (OTP) 
+#### PGW-PFE3DS, send verification code
+![laptops](screenshots/Payment%20gateway%20requesting%20or%20sending%20OTP%20code.png?raw=true "Payment gateway requesting or sending OTP code")
+### Step 04: verification email 
+#### Issuer bank send verification email message
+![laptops](screenshots/Code%20verification%20email%20from%20issuer%20bank.png?raw=true "Code verification email from issuer bank")
+### Step 05: type code
+#### PGW-PFE3DS, Enter the code
+![laptops](screenshots/Payment%20gateway%20validating%20OTP%20code.png?raw=true "Payment gateway validating OTP code")
+### Step 06: Make transaction
+#### Merchant
+* Acquirer Account
+![laptops](screenshots/Accounts%20of%20acquirer%20bank%20after%20money%20transfert.png?raw=true "Accounts of acquirer bank after money transfert")
+* Acquirer Transaction
+![laptops](screenshots/Transactions%20of%20acquirer%20bank.png?raw=true "Transactions of acquirer bank")
+#### Customer
+* Issuer Account
+![laptops](screenshots/Accounts%20of%20issuer%20bank%20after%20money%20transfert.png?raw=true "Accounts of issuer bank after money transfert")
+* Issuer Transaction
+![laptops](screenshots/Transactions%20of%20issuer%20bank.png?raw=true "Transactions of issuer bank")
+### Step 07: Showing payment receipt
+#### Hanouti payment receipt
+![laptops](screenshots/Payment%20receipt%20of%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt of ecommerce webapp hanouti")
+### Step 08: Send payment receipt via email
+####  Hanouti send payment receipt via email
+![laptops](screenshots/Payment%20receipt%20email%20from%20ecommerce%20webapp%20hanouti.png?raw=true "Payment receipt email from ecommerce webapp hanouti")
