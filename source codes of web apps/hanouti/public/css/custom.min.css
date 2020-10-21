@@ -1,0 +1,34 @@
+/* ************************
+        PRODUCT
+************************** */
+
+
+.home .single-product {
+  min-height: 300px;
+}
+
+.product-list {
+  min-height: 340px;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%!important;
+  height: 200px!important;
+}
+
+.category-image > img {
+  display: block;
+  max-width: 100%!important;
+  height: auto!important;
+}
+
+
+.myStyle ul.navbar-nav li a {
+    font-size: 20px!important;
+  }
+
+  .section-title h2 {
+    margin-bottom: 20px;
+    margin-top: -75px;
+  }
