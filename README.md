@@ -83,7 +83,7 @@ We have also used: PHP as a server scripting language, and Linux Ubuntu as OS, a
 1. **Hanouti ecommerce**
 To verify our implementation of 3D Secure protocol, we have developed this ecommerce website to make online shopping and it allows to their consumers to buy goods or services from a seller (Merchant) over the Internet using a web browser. The source code is in [source codes of web apps/hanouti folder](source%20codes%20of%20web%20apps/hanouti).
 2. **Payment gateway**
-To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [source codes of web apps/](source%20codes%20of%20web%20apps/interoperability_domain).
+To simulate a payment gateway, we have developed this web app, it allaws to us to verify the cardholder information, to send verification code, and to validate this code with the issuer domain. The source code is in [source codes of web apps/pgw_pfe3ds folder](source%20codes%20of%20web%20apps/interoperability_domain).
 3. **Interoperability domain**
 To simulate an interoperability domain, we have developed this web app to forward messages between issuer and acquirer domains. The source code is in [source codes of web apps/interoperability_domain folder](source%20codes%20of%20web%20apps/interoperability_domain).
 4. **Issuer domain(bank)**
