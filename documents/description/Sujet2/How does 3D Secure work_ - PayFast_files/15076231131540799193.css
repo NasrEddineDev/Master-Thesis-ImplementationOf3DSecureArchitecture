@@ -1,0 +1,196 @@
+/* Custom Stylesheet hash:15076231131540799193 dated 14 Sep, 2019 07:43:08+Africa/Johannesburg */
+/* Add custom CSS here */
+*{
+  box-sizing: border-box;
+}
+.header__top__wrapper.wrap{
+  margin-left: auto;
+margin-right: auto;
+max-width: 100%;
+min-width: 320px;
+ max-height: 50px;
+ background-color:#c30017;
+}
+.header__top a{
+  display: inline-block;
+  padding: 15px 0px 3px 0px;
+  margin-right: 20px;
+  color: #FFFFFF;
+}
+ .header__top a:focus, .header__top a:visited,
+.u-visuallink span.menu__truncate{
+  color: #FFFFFF;
+}
+
+.u-visuallink{
+  top: 8px;
+}
+
+.menu__link.active{
+  background: none;
+}
+.u-visuallink span.menu__truncate a, .nav__menu .open a, .nav__menu a{
+  border-bottom: none;
+}
+.headWrap{
+  border-bottom: solid 3px #c30017;
+  width: 100%;
+  max-height:50px;
+  display: flex;
+  position: relative;
+}
+
+.search_bar{
+  position: absolute;
+  top: 10px;
+  right: 212px;
+}
+.branding{
+  width: 300px;
+  position: relative;
+  max-height: 50px;
+  background-color: #fff;
+  transform: skew(-35deg);
+  margin-left: -30px;
+  text-align: center;
+}
+.branding a{
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  padding: 0;
+}
+.branding a img{
+  top: 12px;
+  left: 55px;
+  position: relative;
+  height: 25px;
+  transform: skew(35deg);
+  margin-left: 25px;
+}
+.headMenu{
+  float: left;
+  width: 100%;
+  height: 50px;
+  background: #c30017;
+  padding: 0  0 0 35px;
+  
+}
+.clearfix{
+  clear: both;
+}
+.header__right{
+      background-color: #c30017;
+    display: -webkit-inline-box;
+    display: inline-flex;
+}
+
+.nav__menu a,.nav__menu a:hover,.nav__menu a:focus,.nav__menu a:visited {
+    color: #505357;
+    display: block;
+    margin: 1px -1px;
+    padding: 0.1em 0.75em 0.15em;
+    transition: all 0.12s ease;
+}
+.nav__menu a:hover, .nav__menu a:active{
+  background-color: #e1e1e1 !important;
+}
+
+#loggedUser{
+  position: absolute;
+  right: 25px;
+  top: 0px;
+}
+
+.footer{
+      background-color: #b4b4b4;
+}
+
+#pf-footer{
+  color: #000000;
+}
+#login-form .divider,#login-form > div.u-table__cell:last-of-type, #login-form .button--signin--twitter, #login-form .button--signin--facebook, #login-form .button--signin--google{
+  display: none;
+}
+
+#login-form > div.u-table__cell:first-of-type{
+  margin:0 auto;
+  max-width: 390px !important;
+}
+#new-conversation-view .textfield, #new-conversation-view .textfield__label, #new-conversation-view .drill-wrap, #new-conversation-view .drilldown,#request-subject{
+  display: block !important;
+  max-width: 412px !important;
+  min-width: 412px !important;
+}
+#new-conversation-view .select-wrapper, #new-conversation-view .drill-wrap, #new-conversation-view .drilldown{
+  width: 100%;
+}
+a, a:hover, a:focus, a:active, .u-visuallink, .u-visuallink:hover,
+.heading--blue,
+.fr-toolbar .fr-command.fr-btn.fr-active,
+.fr-popup .fr-command.fr-btn.fr-active,
+.fr-desktop .fr-command.fr-active:hover,
+.fr-desktop .fr-command.fr-active:focus,
+.fr-desktop .fr-command.fr-active.fr-selected,
+.fr-popup .fr-colors-tabs .fr-colors-tab:hover,
+.fr-popup .fr-colors-tabs .fr-colors-tab.fr-selected-tab,
+.tab__notCurrent a:hover {
+	color: #c30017;
+}
+
+.button--primary,
+.button--primary:hover:enabled,
+.button--primary:focus:enabled,
+.button--primary:active:enabled,
+.nav__menu a:hover, .nav__menu a:active, .dd__link:hover,
+.fr-popup .fr-checkbox input:checked + span,
+.fr-popup .fr-colors-tabs .fr-colors-tab[data-param1="background"]::after,
+.fr-image-resizer .fr-handler,
+.fr-image-progress-bar-layer > div.fr-loader span,
+.autocomplete--field__item:hover, .autocomplete--field__item.is-selected {
+	background-color: #c30017;
+}
+
+.textfield:focus,
+.search-wrapslim .inputaddon__field:focus,
+.file-btn:focus, .file-btn.is-active, .dz-drag-hover {
+	border-color: #c30017;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 4px -1px #c30017;
+}
+
+.button--primary:focus:enabled, .button--primary:active:enabled,
+.select:focus, .drill-default:focus, .drill-default.drill-focus {
+	box-shadow: 0 0 3px 0 #c30017;
+}
+
+.tab > li,
+.textfield.picker__input--active,
+.textfield--heading:focus,
+.pager__selected,
+.tab__notCurrent:hover,
+.picker__select--month:focus, .picker__select--year:focus,
+.picker__day--highlighted, .picker__day--selected:hover,
+.picker--focused .picker__day--selected, .picker__button--clear:focus,
+.picker__button--close:focus,
+.fr-popup .fr-input-line input[type="text"]:focus,
+.fr-popup .fr-input-line textarea:focus,
+.fr-popup .fr-checkbox input:checked + span,
+.fr-popup .fr-checkbox input:focus + span,
+.fr-image-resizer, .fr-image-upload-layer.fr-drop,
+table td.fr-selected-cell, table th.fr-selected-cell,
+.fr-table-resizer div,
+.fr-popup .fr-table-size .fr-select-table-size > span.hover > span {
+	border-color: #c30017;
+}
+
+input[type="checkbox"].switch:focus + div {
+	box-shadow: 0 0 .2em 1px #c30017, 0 1px 1px hsla(0,0%,100%,.6);
+}
+
+.picker__day--today:before,
+.picker__button--today:before {
+	border-top-color: #c30017;
+}
