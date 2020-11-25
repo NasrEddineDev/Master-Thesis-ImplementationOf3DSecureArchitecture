@@ -32,13 +32,13 @@
 <a name="motivation"></a>
 ## 1) Motivation:
 This is our master thesis project in [University of Ibn Khaldoun TIARET](http://www.univ-tiaret.dz/an/). The present projects and documents (please take a look to this document: [Master thesis repport](master%20thesis%20docs/Master%20Thesis%203D%20Secure%20Architecture.pdf)) aims to describe how to implement the 3D secure protocol according to the EMV standard and adapt it for the ecommerce market in Algeria, and also how to make the double authentication using SMS and email via one-time password (OTP), or other mechanisms.
-To implement 3D Secure protcol, we have developed 5 web applications witch are: Hanouti ecommerce, payment gateway, interoperability domain, Issuer domain(bank), acquirer domain(bank). We have used Laravel and JQuery framework and many others open source tools to develop these web apps and to implement this architecture.
+To do this project, we have developed 5 web applications whitch are: Hanouti ecommerce, payment gateway, interoperability domain, Issuer domain(bank), acquirer domain(bank). We have used Laravel and JQuery framework and many many others open source tools to develop these web apps and to implement this architecture. I hope you to enjoy reading this thesis and testing the five web apps!!!.
 <a name="folders-description"></a>
 ## 2) Folders description:
 * **master thesis docs:** this folder contains report and slidshow of this thesis
 * **figures:** contains figures used in this thsis
-* **source codes of web apps:** contains source codes of the fifth web apps
-* **books:** contains few usefull books
+* **source codes of web apps:** contains source codes of the five web apps
+* **books:** contains usefull books repports
 * **images:** contains logo, ...
 * **screenshots:** according to the given name, this folder contains screeshots of differents web applications
 <a name="about-this-project"></a>
